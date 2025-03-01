@@ -1,0 +1,40 @@
+1. Điều gì xảy ra nếu người dùng chọn "Cancel"?
+
+Khi người dùng nhấn "Cancel", phương thức JOptionPane.showConfirmDialog() sẽ trả về JOptionPane.CANCEL_OPTION.
+Trong đoạn mã hiện tại, giá trị CANCEL_OPTION không được xử lý cụ thể, nên chương trình sẽ hiển thị kết quả "You've chosen: No" vì chỉ có hai lựa chọn "Yes" và "No" trong đoạn mã (option == JOptionPane.YES_OPTION ? "Yes" : "No").
+Để xử lý chính xác trường hợp này, có thể mở rộng mã để kiểm tra CANCEL_OPTION và hiển thị thông báo phù hợp.
+
+
+2. Làm thế nào để tùy chỉnh các lựa chọn hiển thị cho người dùng, ví dụ chỉ có "Yes" và "No" hoặc "I do" và "I don't"?
+Có thể sử dụng phương thức JOptionPane.showOptionDialog(), cho phép tùy chỉnh các nút hiển thị:
+Ví dụ: Chỉ hiển thị "Yes" và "No"
+
+java
+Sao chép
+Chỉnh sửa
+int option = JOptionPane.showOptionDialog(null,
+    "Do you agree?", 
+    "Custom Options", 
+    JOptionPane.YES_NO_OPTION, 
+    JOptionPane.QUESTION_MESSAGE, 
+    null, 
+    new Object[]{"Yes", "No"}, 
+    "Yes");
+
+JOptionPane.showMessageDialog(null, "You've chosen: " + (option == 0 ? "Yes" : "No"));
+new Object[]{"Yes", "No"}: Định nghĩa hai lựa chọn tùy chỉnh.
+Ví dụ: Tùy chỉnh thành "I do" và "I don’t"
+
+java
+Sao chép
+Chỉnh sửa
+int option = JOptionPane.showOptionDialog(null,
+    "Do you agree?", 
+    "Custom Options", 
+    JOptionPane.YES_NO_OPTION, 
+    JOptionPane.QUESTION_MESSAGE, 
+    null, 
+    new Object[]{"I do", "I don’t"}, 
+    "I do");
+
+JOptionPane.showMessageDialog(null, "You've chosen: " + (option == 0 ? "I do" : "I don’t"));
