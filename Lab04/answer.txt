@@ -1,0 +1,73 @@
+1.3 So sánh các thành phần Swing và AWT
+a. So sánh các container cấp cao (Top-level Containers)
+
+Tính năng	AWT	Swing
+Cửa sổ chính	Frame	JFrame
+Hộp thoại (Dialog)	Dialog	JDialog
+Container không có khung cửa sổ	Panel	JPanel
+b. So sánh các thành phần khác (Other Components)
+
+Thành phần	AWT	Swing
+Nhãn	Label	JLabel
+Nút bấm	Button	JButton
+Ô nhập văn bản	TextField	JTextField
+Vùng nhập nhiều dòng	TextArea	JTextArea
+Menu	Menu, MenuBar	JMenu, JMenuBar
+Container	Panel, Frame	JPanel, JFrame, JLabel
+c. So sánh xử lý sự kiện (Event Handling)
+
+Khía cạnh	AWT	Swing
+Mô hình sự kiện	Mô hình ủy quyền sự kiện cũ	Mô hình tương tự nhưng linh hoạt hơn
+Giao diện Listener	Có (ví dụ: ActionListener)	Có (giống AWT)
+Mô hình luồng (Thread)	Không dùng luồng riêng để cập nhật	Phải dùng Event Dispatch Thread (EDT) để đảm bảo an toàn khi cập nhật giao diện
+Tổng quan: So sánh AWT và Swing
+Top-Level Containers
+
+AWT sử dụng các container như Frame, Dialog, Applet.
+
+Swing cung cấp các phiên bản mở rộng như JFrame, JDialog, JApplet.
+
+→ Swing là "lightweight" và hỗ trợ nhiều tính năng hiện đại như root pane và giao diện người dùng có thể thay đổi (pluggable look and feel), còn AWT là "heavyweight" vì phụ thuộc vào hệ điều hành.
+
+Tên lớp thành phần
+
+Swing kế thừa gần như toàn bộ chức năng của AWT nhưng được mở rộng, các lớp thường được thêm tiền tố J (ví dụ: JButton, JLabel).
+
+Thành phần Swing được viết hoàn toàn bằng Java nên linh hoạt và dễ tùy chỉnh hơn; trong khi đó, AWT phụ thuộc vào thư viện gốc (native).
+
+Xử lý sự kiện
+
+Cả AWT và Swing đều dùng mô hình ủy quyền sự kiện (event delegation model), với các interface như ActionListener, MouseListener, v.v.
+
+Trong Swing, việc xử lý sự kiện thường dùng anonymous inner class hoặc lambda expression.
+
+Với Swing, mọi thay đổi giao diện nên thực hiện trên EDT (Event Dispatch Thread) để tránh lỗi liên quan đến luồng.
+
+Giao diện và Look & Feel
+
+AWT dùng giao diện gốc của hệ điều hành, hạn chế khả năng tùy chỉnh.
+
+Swing hỗ trợ "pluggable look and feel" → có thể thay đổi chủ đề, tạo giao diện đồng nhất trên nhiều nền tảng.
+
+→ Ứng dụng Swing thường hiện đại và nhất quán hơn, trong khi AWT trông giống ứng dụng của hệ điều hành nhưng khó tùy biến.
+
+Yêu cầu: Cách kiểm tra xem Media có implement interface Playable để tạo nút “Play”
+Khi hiển thị các mặt hàng truyền thông (media) trong cửa hàng, có những loại có thể phát (như DVD, CD) và có loại không thể phát (như sách). Để xử lý điều này, chương trình sử dụng interface Playable.
+
+Interface Playable là một "hợp đồng": mọi lớp đại diện cho media có thể phát (DVD, CD) phải implement interface này và cung cấp phương thức play().
+
+Khi tạo nút cho từng mặt hàng, chương trình không hiển thị nút "Play" cho các đối tượng không thể phát như sách.
+
+Cách xử lý trong code:
+Dùng từ khóa instanceof trong Java để kiểm tra xem media đó có thuộc về lớp thực hiện interface Playable không.
+
+Chỉ hiển thị nút "Play" nếu điều kiện media instanceof Playable đúng.
+
+Khi người dùng nhấn "Play", chương trình ép kiểu (cast) đối tượng media thành Playable và gọi phương thức play(), đảm bảo an toàn.
+
+Lợi ích của cách làm này:
+Tránh lỗi khi gọi play() cho sách.
+
+Giao diện người dùng thân thiện và trực quan.
+
+Thiết kế đúng theo nguyên lý hướng đối tượng (OOP): linh hoạt, dễ mở rộng, và dễ bảo trì.
