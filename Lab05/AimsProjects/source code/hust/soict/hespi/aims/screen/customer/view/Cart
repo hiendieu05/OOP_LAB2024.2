@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="hust.soict.hespi.aims.screen.customer.controller.CartController"
+            prefWidth="1024" prefHeight="768">
+
+    <!-- Top section: Header and View Store button -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" prefHeight="100" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="20" right="20" />
+            </BorderPane.margin>
+            <children>
+                <Label text="Cart" textFill="#004cff">
+                    <font>
+                        <Font size="50" />
+                    </font>
+                </Label>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="View Store" prefWidth="100" prefHeight="50"
+                        onAction="#btnViewStorePressed" />
+            </children>
+        </HBox>
+    </top>
+
+    <!-- Center section: Filter + Table + Play/Remove -->
+    <center>
+        <VBox alignment="CENTER" spacing="10" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="20" right="20" />
+            </BorderPane.margin>
+            <children>
+
+                <!-- Filter row -->
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <VBox.margin>
+                        <Insets top="10" bottom="10" />
+                    </VBox.margin>
+                    <children>
+                        <Label text="Filter" />
+                        <RadioButton text="By ID" selected="true">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="filterCategory" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton text="By Title" toggleGroup="$filterCategory" />
+                    </children>
+                </HBox>
+
+                <!-- TableView -->
+                <TableView fx:id="tblMedia" prefHeight="300">
+                    <columns>
+                        <TableColumn fx:id="colMediaId" text="ID" prefWidth="75" />
+                        <TableColumn fx:id="colMediaTitle" text="Title" prefWidth="150" />
+                        <TableColumn fx:id="colMediaCategory" text="Category" prefWidth="150" />
+                        <TableColumn fx:id="colMediaCost" text="Cost" prefWidth="100" />
+                    </columns>
+                </TableView>
+
+                <!-- Buttons: Play & Remove -->
+                <HBox alignment="TOP_RIGHT" spacing="20" padding="10">
+                    <children>
+                        <Button fx:id="btnPlay" text="Play" prefWidth="80" onAction="#btnPlayPressed" />
+                        <Button fx:id="btnRemove" text="Remove" prefWidth="80" onAction="#btnRemovePressed" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+
+    <!-- Bottom section: Total cost and Place Order button -->
+    <bottom>
+        <VBox alignment="TOP_CENTER" spacing="30" BorderPane.alignment="CENTER" padding="20">
+            <children>
+                <HBox alignment="CENTER">
+                    <Label fx:id="costLabel" text="Total">
+                        <font>
+                            <Font name="System Bold" size="24" />
+                        </font>
+                    </Label>
+                </HBox>
+                <Button fx:id="btnPlaceOrder" text="Place Order" textFill="WHITE"
+                        style="-fx-background-color: #004cff;">
+                    <font>
+                        <Font name="System Bold" size="24" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+    </bottom>
+
+</BorderPane>

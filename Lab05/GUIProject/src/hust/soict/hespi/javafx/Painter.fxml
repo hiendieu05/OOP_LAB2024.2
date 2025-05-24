@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="drawingAreaPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hust.soict.hespi.javafx.PainterController">
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+    </padding>
+    <left>
+        <VBox maxHeight="1.7976931348623157E308" spacing="8.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets right="8.0" />
+            </padding>
+            <children>
+                <TitledPane text="Tools">
+                    <content>
+                        <VBox>
+                            <children>
+                                <RadioButton fx:id="penRadioButton" mnemonicParsing="false" text="Pen">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="toolGroup" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="eraserRadioButton" mnemonicParsing="false" text="Eraser " toggleGroup="$toolGroup" />
+                            </children>
+                        </VBox>
+                    </content>
+                </TitledPane>
+                <Button mnemonicParsing="false" onAction="#clearButtonPressed" onMouseDragged="#drawingAreaMouseDragged" text="Clear" />
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <Pane fx:id="drawingAreaPane" onMouseDragged="#drawingAreaMouseDragged" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>

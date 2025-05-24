@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="hust.soict.hespi.aims.screen.customer.controller.ItemController"
+            style="-fx-border-color: black;"
+            prefWidth="300" prefHeight="180">
+
+    <children>
+        <VBox alignment="CENTER" spacing="10"
+              AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              padding="10">
+            <children>
+                <!-- Title label -->
+                <Label fx:id="lblTitle"
+                       text="Title"
+                       prefWidth="280"
+                       alignment="CENTER"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+                <!-- Cost label -->
+                <Label fx:id="lblCost"
+                       text="Cost"
+                       prefWidth="280"
+                       alignment="CENTER"
+                       style="-fx-font-size: 14px;" />
+
+                <!-- Button row -->
+                <HBox alignment="CENTER" spacing="15">
+                    <children>
+                        <Button fx:id="btnAddToCart"
+                                text="Add to Cart"
+                                onAction="#btnAddToCartClicked"
+                                prefWidth="120" />
+                        <Button fx:id="btnPlay"
+                                text="Play"
+                                onAction="#btnPlayClicked"
+                                prefWidth="80" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
