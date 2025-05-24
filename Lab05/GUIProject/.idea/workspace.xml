@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ab5b1ebf-7a15-4d5f-b15d-89fc70f53e3c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/hust/soict/hedspi/javafx/Painter.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hust/soict/hedspi/javafx/Painter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hust/soict/hedspi/javafx/PainterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab03/AimsProjects/.idea/AimsProjects.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab03/AimsProjects/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab03/AimsProjects/source code/hust/soict/hespi/aims/cart/Cart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab03/AimsProjects/source code/hust/soict/hespi/aims/media/CompactDisc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab03/AimsProjects/source code/hust/soict/hespi/aims/media/DigitalVideoDisc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab03/AimsProjects/source code/hust/soict/hespi/aims/media/Disc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab03/AimsProjects/source code/hust/soict/hespi/aims/media/Media.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab03/AimsProjects/source code/hust/soict/hespi/aims/media/MediaComparatorByCostTitle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab03/AimsProjects/source code/hust/soict/hespi/aims/media/MediaComparatorByTitleCost.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab03/AimsProjects/source code/hust/soict/hespi/aims/media/Playable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab03/AimsProjects/source code/hust/soict/hespi/aims/media/Track.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab03/AimsProjects/source code/hust/soict/hespi/aims/media/book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab03/AimsProjects/source code/hust/soict/hespi/aims/store/Store.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab03/AimsProjects/source code/hust/soict/hespi/test/cart/CartTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab03/AimsProjects/source code/hust/soict/hespi/test/disc/TestPassingParameter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab03/AimsProjects/source code/hust/soict/hespi/test/store/StoreTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab04/AimsProjects/source code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab04/AimsProjects/source code/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2wQq5a2Z8fHcqs1Y2fRqD2xCcjG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Painter.executor": "Run",
+    "Application.PainterApp.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/bomberman-oop-starter-2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/DELL/IdeaProjects/tuhocjava/Lab04/GUIProject/src/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="PainterApp" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="hust.soict.hedspi.javafx.Painter" />
+      <module name="GUIProject" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\javafx-sdk-21\lib&quot; --add-modules javafx.controls,javafx.fxml,javafx.graphics" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.39" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.39" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab5b1ebf-7a15-4d5f-b15d-89fc70f53e3c" name="Changes" comment="" />
+      <created>1745983963888</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745983963888</updated>
+      <workItem from="1745983965178" duration="1652000" />
+      <workItem from="1748067092786" duration="1607000" />
+      <workItem from="1748068727187" duration="592000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
