@@ -1,1 +1,0 @@
-Có, Java cho phép tạo nhiều constructor trong một lớp. Tính năng này được gọi là constructor overloading (nạp chồng constructor). Nó cho phép khai báo nhiều constructor miễn là chúng có danh sách tham số khác nhau (khác về số lượng hoặc kiểu dữ liệu).
