@@ -1,0 +1,12 @@
+Cập nhật lớp Aims để xử lý ngoại lệ khi gọi phương thức play()
+Lớp Aims cần được điều chỉnh để quản lý mọi ngoại lệ có thể phát sinh trong quá trình gọi các phương thức play(). Điều gì sẽ xảy ra nếu chúng ta bỏ qua việc cập nhật này?
+
+PlayerException được định nghĩa là một checked exception (do nó kế thừa trực tiếp từ java.lang.Exception). Đặc điểm này có ý nghĩa quan trọng: trình biên dịch Java sẽ kiểm tra và buộc chúng ta phải có cơ chế xử lý (thông qua khối try-catch) hoặc khai báo ủy quyền (sử dụng từ khóa throws trong chữ ký phương thức) tại bất kỳ vị trí nào mà PlayerException có khả năng bị ném ra.
+
+Hậu quả nếu không cập nhật để "bắt" PlayerException:
+
+Trong tình huống PlayerException là một checked exception, việc không cập nhật lớp Aims để "bắt" (catch) hoặc ủy quyền (throw) nó sẽ dẫn đến lỗi biên dịch. Trình biên dịch Java sẽ thông báo lỗi, yêu cầu lập trình viên phải bao quanh lệnh gọi play() bằng một khối try-catch hoặc thêm throws PlayerException vào chữ ký của phương thức trong lớp Aims đang gọi play().
+
+Ngược lại, nếu PlayerException là một unchecked exception (ví dụ, kế thừa từ RuntimeException), trình biên dịch sẽ cho phép chương trình biên dịch thành công ngay cả khi chúng ta không xử lý nó. Tuy nhiên, điều này lại tiềm ẩn rủi ro trong quá trình chạy. Nếu một PlayerException thực sự xảy ra và không có khối catch nào ở các cấp gọi hàm phía trên, chương trình sẽ dừng lại một cách bất ngờ, kèm theo việc in ra dấu vết ngăn xếp (stack trace) của ngoại lệ, gây khó khăn cho việc theo dõi và khắc phục lỗi.
+
+Như vậy, với việc PlayerException là một checked exception, việc cập nhật lớp Aims để xử lý nó tại các điểm gọi phương thức play() là bắt buộc để đảm bảo chương trình có thể biên dịch và chạy một cách trơn tru, đồng thời có khả năng ứng phó với các tình huống lỗi có thể xảy ra.
